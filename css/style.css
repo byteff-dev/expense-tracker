@@ -1,0 +1,113 @@
+:root {
+  color-scheme: light;
+
+  --bg: #f7f7f4;
+  --text: #242424;
+  --subtext: #666666;
+  --border: #ddddda;
+  --link: #315b8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Pretendard",
+    "Noto Sans KR",
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+
+  padding-top: max(1.5rem, env(safe-area-inset-top));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  padding-left: max(1rem, env(safe-area-inset-left));
+}
+
+main {
+  width: min(100%, 48rem);
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  line-height: 1.3;
+}
+
+h2 {
+  margin: 2rem 0 0.75rem;
+
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  line-height: 1.4;
+}
+
+p {
+  margin: 0.6rem 0;
+}
+
+ul,
+ol {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.subtitle,
+.date {
+  color: var(--subtext);
+}
+
+.date {
+  font-size: 0.9rem;
+}
+
+section {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+}
+
+a {
+  color: var(--link);
+  text-underline-offset: 0.15em;
+  word-break: break-word;
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--subtext);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+  }
+}
